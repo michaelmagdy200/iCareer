@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">iCareer</string>
+    <string name="todo">TODO</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="login">Login</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="name">Name</string>
+    <string name="company">Company</string>
+    <string name="job_seeker">Job Seeker</string>
+    <string name="title_activity_job_seeker_home">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="username">username</string>
+    <string name="position">Position</string>
+    <string name="education">Education</string>
+    <string name="address">address</string>
+    <string name="phone">Phone</string>
+    <string name="upload_c_v">Upload C.V</string>
+    <string name="upload">Upload</string>
+    <string name="skills_amp_endorsements"><![CDATA[Skills & Endorsements]]></string>
+    <string name="experience">Experience</string>
+    <string name="title">Title</string>
+    <string name="save">Save</string>
+
+</resources>

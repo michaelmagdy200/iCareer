@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true"
+    tools:context=".LoginActitvity">
+
+    <ImageView
+        android:id="@+id/login_img"
+        android:layout_width="wrap_content"
+        android:layout_height="120dp"
+        android:src="@drawable/ic_careercolor"
+        android:layout_marginTop="50dp"
+        android:outlineAmbientShadowColor="@color/black"
+        />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout_choose"
+        android:layout_below="@+id/login_img"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp">
+        <CheckBox android:id="@+id/checkbox_jobSeeker_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/job_seeker"
+            android:layout_marginStart="30dp"
+           />
+        <CheckBox android:id="@+id/checkbox_company_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/company"
+            android:layout_marginStart="120dp"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/login"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginStart="16dp"
+        android:textSize="35sp"
+        android:id="@+id/login_txt"
+        android:layout_marginTop="10dp"
+        android:padding="8dp"
+        android:layout_below="@+id/layout_choose"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/email"
+        android:id="@+id/email_edtxt"
+        android:layout_margin="10dp"
+        android:padding="15dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:layout_below="@+id/login_txt"
+        android:background="@drawable/edit_txt_shape"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/password"
+        android:id="@+id/password_edtxt"
+        android:layout_margin="10dp"
+        android:padding="15dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:layout_below="@+id/email_edtxt"
+        android:background="@drawable/edit_txt_shape"
+        android:inputType="textPassword"
+        />
+    <Button
+        android:id="@+id/login_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/password_edtxt"
+        android:layout_centerInParent="true"
+        android:text="@string/login"
+        android:textColor="@color/white"
+        android:background="@drawable/button_shape"
+        android:shadowColor="@color/black"
+        android:layout_marginTop="20dp"
+    />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_btn"
+        android:id="@+id/creatAccount"
+        android:layout_centerInParent="true"
+        android:layout_margin="16dp"
+        android:padding="16dp"
+        android:text="Don't have any account? Sign Up"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="@color/purple_700"
+        />
+</RelativeLayout>

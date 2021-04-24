@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1073969807749",
+    "project_id": "icareer-c125e",
+    "storage_bucket": "icareer-c125e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1073969807749:android:153ef7e8180cc3b91384ec",
+        "android_client_info": {
+          "package_name": "com.example.icareer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1073969807749-e4p7os8vehp2v32fgc7qogl0ivcskp69.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4f3brWIZmUoE23bXdJ0gv30i1uQJ-8ns"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1073969807749-e4p7os8vehp2v32fgc7qogl0ivcskp69.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
