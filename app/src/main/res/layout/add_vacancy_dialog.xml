@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Company Name"
+        android:id="@+id/company_name_add"
+        android:background="@drawable/edit_txt_shape"
+        android:layout_margin="8dp"
+        android:padding="10dp"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/title"
+        android:id="@+id/job_title"
+        android:background="@drawable/edit_txt_shape"
+        android:layout_margin="8dp"
+        android:padding="10dp"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Description"
+        android:id="@+id/job_description"
+        android:background="@drawable/edit_txt_shape"
+        android:layout_margin="8dp"
+        android:padding="10dp"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Salary"
+        android:id="@+id/job_salary"
+        android:background="@drawable/edit_txt_shape"
+        android:layout_margin="8dp"
+        android:padding="10dp"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Date"
+        android:id="@+id/post_data"
+        android:background="@drawable/edit_txt_shape"
+        android:layout_margin="8dp"
+        android:padding="10dp"
+        android:clickable="false"
+        android:cursorVisible="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Number of Vacancy"
+        android:id="@+id/no_of_vacancy"
+        android:background="@drawable/edit_txt_shape"
+        android:layout_margin="8dp"
+        android:padding="10dp"
+        />
+</LinearLayout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/username"
+        android:padding="8dp"
+        android:layout_margin="8dp"
+        android:id="@+id/application_name"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/email"
+        android:padding="8dp"
+        android:layout_margin="8dp"
+        android:id="@+id/application_email"
+
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/phone"
+        android:padding="8dp"
+        android:layout_margin="8dp"
+        android:id="@+id/application_phone"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Summary"
+        android:padding="8dp"
+        android:layout_margin="8dp"
+        android:id="@+id/application_summary"
+
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/education"
+        android:padding="8dp"
+        android:layout_margin="8dp"
+        android:id="@+id/application_education"
+
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/skills_amp_endorsements"
+        android:padding="8dp"
+        android:layout_margin="8dp"
+        android:id="@+id/application_skills"
+
+        />
+
+</LinearLayout>

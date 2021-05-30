@@ -71,7 +71,7 @@
         android:padding="15dp"
         android:paddingStart="15dp"
         android:paddingEnd="15dp"
-        android:layout_below="@+id/phoneNumber_edtTxt"
+        android:layout_below="@+id/title_edtTxt"
         android:background="@drawable/edit_txt_shape"
         />
     <EditText
@@ -102,6 +102,18 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:hint="Title or industry"
+        android:id="@+id/title_edtTxt"
+        android:layout_margin="10dp"
+        android:padding="15dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:layout_below="@+id/phoneNumber_edtTxt"
+        android:background="@drawable/edit_txt_shape"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:hint="Address"
         android:id="@+id/address_edtText"
         android:layout_margin="10dp"
@@ -121,7 +133,7 @@
         android:textColor="@color/white"
         android:background="@drawable/button_shape"
         android:shadowColor="@color/black"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         />
 
 </RelativeLayout>

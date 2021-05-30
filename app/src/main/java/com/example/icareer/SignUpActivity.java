@@ -12,16 +12,19 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.icareer.Model.ComapnyClass;
+import com.example.icareer.Model.JobSeekerClass;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class SignUpActivity extends AppCompatActivity implements View.OnClickListener {
 
-    EditText name, email, password , phoneNumber , address;
+    EditText name, email, password , phoneNumber , address , title ;
     Button signUp;
     DatabaseReference referenceJobSeeker;
     DatabaseReference referenceCompany;
@@ -30,6 +33,8 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
     CheckBox checkBoxJobSeekerSignUp, checkBoxCompanySingUp;
     private FirebaseAuth mAuth ;
     ProgressDialog loadingBar ;
+    FirebaseUser user;
+    String userID ;
 
 
     @Override
@@ -40,19 +45,24 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         loadingBar = new ProgressDialog(this);
         mAuth = FirebaseAuth.getInstance();
 
+
+        referenceJobSeeker = FirebaseDatabase.getInstance().getReference("Job Seeker");
+        referenceCompany = FirebaseDatabase.getInstance().getReference("Company");
+
+
         name = (EditText) findViewById(R.id.name_edtxt);
         email = (EditText) findViewById(R.id.emailSignUp_edtxt);
         password = (EditText) findViewById(R.id.passwordSignUp_edtxt);
         phoneNumber = (EditText) findViewById(R.id.phoneNumber_edtTxt);
         address = (EditText) findViewById(R.id.address_edtText);
+        title = (EditText) findViewById(R.id.title_edtTxt);
 
         signUp = (Button) findViewById(R.id.signUp_btn);
         checkBoxJobSeekerSignUp = (CheckBox) findViewById(R.id.checkbox_jobSeeker_signup);
         checkBoxJobSeekerSignUp.setOnClickListener(this);
         checkBoxCompanySingUp = (CheckBox) findViewById(R.id.checkbox_company_signUp);
         checkBoxCompanySingUp.setOnClickListener(this);
-        referenceJobSeeker = FirebaseDatabase.getInstance().getReference().child("Job Seeker");
-        referenceCompany = FirebaseDatabase.getInstance().getReference().child("Company");
+
         comapnyClass = new ComapnyClass();
         jobSeekerClass = new JobSeekerClass();
 
@@ -89,6 +99,16 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                                                         Toast.makeText(SignUpActivity.this, "Sign Up Succefully", Toast.LENGTH_SHORT).show();
                                                         Intent intent = new Intent(SignUpActivity.this, LoginActitvity.class);
                                                         startActivity(intent);
+
+                                                        jobSeekerClass.setNameJobSeeker(name.getText().toString().trim());
+                                                        jobSeekerClass.setEmailJobSeeker(email.getText().toString().trim());
+                                                        jobSeekerClass.setPasswordJobSeeker(password.getText().toString().trim());
+                                                        jobSeekerClass.setPhoneNumberJobSeeker(phoneNumber.getText().toString().trim());
+                                                        jobSeekerClass.setAddressJobSeeker(address.getText().toString().trim());
+                                                        jobSeekerClass.setTitleJobSeeker(title.getText().toString().trim());
+                                                        String userIdForJobSeeker = referenceJobSeeker.push().getKey();
+                                                        jobSeekerClass.setUid(userIdForJobSeeker);
+                                                        referenceJobSeeker.child(userIdForJobSeeker).setValue(jobSeekerClass);
                                                     }
                                                     else {
                                                         Toast.makeText(SignUpActivity.this, task.getException().getMessage(),Toast.LENGTH_LONG).show();
@@ -97,13 +117,6 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                                                 }
                                             });
 
-                                    jobSeekerClass.setNameJobSeeker(name.getText().toString().trim());
-                                    jobSeekerClass.setEmailJobSeeker(email.getText().toString().trim());
-                                    jobSeekerClass.setPasswordJobSeeker(password.getText().toString().trim());
-                                    jobSeekerClass.setPhoneNumberJobSeeker(phoneNumber.getText().toString().trim());
-                                    jobSeekerClass.setAddressJobSeeker(address.getText().toString().trim());
-
-                                    referenceJobSeeker.push().setValue(jobSeekerClass);
 
                                 }
                                 else
@@ -149,9 +162,12 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                                     comapnyClass.setNameComany(name.getText().toString().trim());
                                     comapnyClass.setEmailComapny(email.getText().toString().trim());
                                     comapnyClass.setPasswordCompany(password.getText().toString().trim());
-                                    comapnyClass.setPhoneNumberJobSeeker(phoneNumber.getText().toString().trim());
-                                    comapnyClass.setAddressJobSeeker(address.getText().toString().trim());
-                                    referenceCompany.push().setValue(comapnyClass);
+                                    comapnyClass.setPhoneNumberComapny(phoneNumber.getText().toString().trim());
+                                    comapnyClass.setAddressComapny(address.getText().toString().trim());
+                                    comapnyClass.setTitleCompany(title.getText().toString().trim());
+                                    String userIdForCompany = referenceCompany.push().getKey();
+                                    comapnyClass.setUid(userIdForCompany);
+                                    referenceCompany.child(userIdForCompany).setValue(comapnyClass);
 
                                 }
                                 else

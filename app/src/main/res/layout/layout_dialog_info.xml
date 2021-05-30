@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/username"
+        android:id="@+id/updateName"
+        android:paddingTop="10dp"
+        android:layout_marginTop="8dp"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/title"
+        android:id="@+id/updateTitle"
+        android:paddingTop="10dp"
+        android:layout_marginTop="8dp"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/address"
+        android:id="@+id/updateAddress"
+        android:paddingTop="10dp"
+        android:layout_marginTop="8dp"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/phone"
+        android:id="@+id/updatePhone"
+        android:paddingTop="10dp"
+        android:layout_marginTop="8dp"
+        />
+
+    <LinearLayout
+        android:layout_marginTop="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+<!--        <Button-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="@string/save"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:layout_marginLeft="90dp"-->
+<!--            android:background="@drawable/button_shape"-->
+<!--            android:id="@+id/save_update"-->
+<!--            />-->
+<!--        <Button-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Close"-->
+<!--            android:layout_marginLeft="50dp"-->
+<!--            android:background="@drawable/shape_colse"-->
+<!--            android:id="@+id/close_update"-->
+
+<!--            />-->
+
+    </LinearLayout>
+
+</LinearLayout>

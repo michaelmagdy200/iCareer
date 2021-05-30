@@ -4,18 +4,15 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.example.icareer.R;
-import com.example.icareer.jobSeeker.ui.dashboard.DashboardFragment;
-import com.example.icareer.jobSeeker.ui.home.HomeFragment;
-import com.example.icareer.jobSeeker.ui.notifications.NotificationsFragment;
+import com.example.icareer.jobSeeker.ui.profile.ProfileFragment;
+import com.example.icareer.jobSeeker.ui.Jobs.JobsFragment;
+import com.example.icareer.jobSeeker.ui.notificationsJobSeeker.NotificationsJobSeekerFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
 
 public class JobSeekerHome extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 
@@ -27,7 +24,7 @@ public class JobSeekerHome extends AppCompatActivity implements BottomNavigation
         navView.setOnNavigationItemSelectedListener(this);
 
         //loading the default fragment
-        loadFragment(new HomeFragment());
+        loadFragment(new JobsFragment());
 
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
@@ -58,15 +55,15 @@ public class JobSeekerHome extends AppCompatActivity implements BottomNavigation
 
         switch (item.getItemId()) {
             case R.id.navigation_jobs:
-                fragment = new HomeFragment();
+                fragment = new JobsFragment();
                 break;
 
             case R.id.navigation_profile:
-                fragment = new DashboardFragment();
+                fragment = new ProfileFragment();
                 break;
 
             case R.id.navigation_notifications:
-                fragment = new NotificationsFragment();
+                fragment = new NotificationsJobSeekerFragment();
                 break;
 
         }
